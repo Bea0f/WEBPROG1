@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <title> Beatrice Fribergs Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Beatrice Friberg">
+    <meta name="description" content="Kontakt portfolio">
+    <meta name="generator" content="html editor">
+    <meta name="keywords" content="beatrice, portfolio, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="javascript.js"></script>
+</head>
+
+<body class="contact">
+    <header>
+        <div class="navBar">
+            <div class="logo" onclick="redirectIndex('index.html')">
+                <h1>PORTFOLIO 2023</h1>
+            </div>
+            <nav>
+                <ul class="meny">
+                    <li><a href="index.html" id="home">Hem</a></li>
+                    <li><a href="projekt.html">Projekt</a></li>
+                    <li><a href="about.html">Om</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="toggle_btn">
+                <img src="bilder/menu.png" alt="Ikon" class="icon" width="25" height="25">
+            </div>
+            <div class="dropdown_menu">
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="projekt.html">Projekt</a></li>
+                    <li><a href="about.html">Om</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main id="contactPage">
+        <h2> Kontakta Mig </h2>
+        <div id="contactForm">
+            <form action="send-message.php" method="post">
+                <label for="namn">Ditt namn:</label><br>
+                <input type="text" id="namn" name="namn" required><br>
+
+                <label for="email">Din mail:</label><br>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="message">Ditt meddelande: </label><br>
+                <textarea id="message" name="message" required cols="50" rows="10"></textarea><br>
+
+                <input type="submit" value="Skicka">
+
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <p class="copy"> &copy;2023 Beatrice Friberg</p>
+    </footer>
+</body>
+
+</html>

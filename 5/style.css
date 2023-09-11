@@ -1,0 +1,456 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat.ttf');
+}
+
+@font-face {
+    font-family: 'Leiko';
+    src: url('Leiko-Regular.otf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+header {
+    position: relative;
+    padding: 5px 0 20px 0;
+    border-bottom: solid 1px;
+    border-color: black;
+}
+
+main {
+    padding: 10px;
+    flex-grow: 1;
+}
+
+footer {
+    padding: 10px;
+    text-align: left;
+
+}
+
+h1 {
+    margin: 10px 0 10px 0;
+    padding: 10px 10px 10px 20px;
+    font-family: 'Leiko', serif;
+    font-size: 200%;
+    letter-spacing: 10px;
+    text-align: left;
+    color: #000;
+}
+
+h2 {
+    font-family: 'Leiko', sans-serif;
+    font-size: 175%;
+}
+
+h3 {
+    font-family: 'Leiko', sans-serif;
+    font-size: 130%;
+    margin: 10px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 250;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px 10px 20px;
+    background-color: #1A2BC7;
+    border-radius: 17px;
+}
+
+a:hover {
+    color: lightblue;
+}
+
+.copy {
+    text-align: right;
+}
+
+/*HEADER*/
+.logo {
+    cursor: pointer;
+}
+
+.navBar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.meny {
+    list-style: none;
+    display: inline-flex;
+    margin-top: 5px;
+}
+
+li {
+    padding: 25px;
+}
+
+.toggle_btn {
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    margin: 10px;
+    padding: 15px 10px 0 10px;
+}
+
+/*DROPDOWN MENU */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    height: 0;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    background-color: #1A2BC7;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: underline;
+
+}
+
+.dropdown_menu li {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*HOME PAGE*/
+.sectionOne {
+    margin: 10px;
+    padding: 30px;
+    padding-left: 60px;
+    height: 125px;
+    max-width: 900px;
+    color: #000;
+}
+
+.sectionOne dt {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    text-indent: -5px
+}
+
+.sectionOne dd {
+    letter-spacing: 2px;
+}
+
+.sectionTwo {
+    margin: 0 auto;
+    padding: 5px 0 5px 0;
+    background-color: #1A2BC7;
+    border-radius: 10px;
+    max-width: 1000px;
+}
+
+.sectionTwo h3 {
+    margin: 15px;
+    color: #fff;
+}
+
+.intro {
+    margin: 10px;
+    color: #fff;
+}
+
+.intro:first-letter {
+    font-size: 150%;
+}
+
+
+/*PROJECT PAGE*/
+.projectsSection {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectsSection h2 {
+    margin: 20px 0 10px 0;
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+.projectOne,
+.projectTwo,
+.projectThree {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 900px;
+    height: 100px;
+    margin: 10px auto;
+    padding: 30px;
+}
+
+.projectOne h3,
+.projectTwo h3,
+.projectThree h3 {
+    font-weight: 300;
+}
+
+.projectThree h3 {
+    margin-top: 8px;
+}
+
+
+.projectOne p,
+.projectTwo p {
+    margin-top: 5px;
+}
+
+.projectOne {
+    background-image: url(bilder/pinpoint.png), url(bilder/pin-color.png);
+    background-repeat: no-repeat, repeat;
+    background-size: contain;
+    background-position: right center, left;
+    cursor: pointer;
+}
+
+.projectTwo {
+    background-image: url(bilder/miljokollen1.png), url(bilder/miljokollen-color.png);
+    background-repeat: no-repeat, repeat;
+    background-size: contain;
+    background-position: right center, left;
+    cursor: pointer;
+}
+
+.projectThree {
+    background-color: #E1E1E1;
+}
+
+#projectLinks {
+    text-decoration: none;
+    background: none;
+}
+
+/*PINPOINT*/
+.pinPoint {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pinPointImages {
+    margin: 30px 20px 20px 20px;
+    border-radius: 45px;
+    max-width: 647px;
+    max-height: 430px;
+}
+
+figcaption {
+    margin-top: -10px;
+    text-align: center;
+}
+
+/*MILJÖKOLLEN*/
+.miljokollen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.milKollenImages {
+    margin: 30px 20px 20px 20px;
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: -10px;
+    text-align: center;
+}
+
+/*ABOUT PAGE*/
+#about_title {
+    text-align: center;
+    margin: 0;
+}
+
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 600px;
+    flex: 1;
+    background-color: #1A2BC7;
+    border-radius: 10px;
+}
+
+.aboutMe p {
+    margin: 20px;
+    text-align: justify;
+    color: #fff;
+}
+
+.aboutMe p:first-letter {
+    font-size: 150%;
+}
+
+.aboutMe img {
+    max-height: 450px;
+    max-width: 350px;
+    border-radius: 30% 70% 70% 30% / 30% 40% 60% 70%;
+}
+
+/*CONTACT PAGE*/
+
+#contactPage {
+    margin: 0 auto;
+}
+
+#contactPage h2 {
+    padding: 10px 0 15px 0;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1A2BC7;
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 500px;
+    color: #fff;
+
+
+}
+
+#contactForm form {
+    max-width: 600px;
+    width: 100%;
+}
+
+#contactForm label,
+#contactForm input,
+#contactForm textarea,
+#contactForm input[type="submit"] {
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contactForm input[type="submit"] {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 2px;
+    height: auto;
+    width: 75px;
+}
+
+#contactForm input[type="submit"]:hover {
+    background-color: #000;
+}
+
+
+/*RESPONSIVE DESIGN*/
+@media only screen and (max-width: 1024px) {
+    .meny {
+        display: none;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+    .aboutMe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutMe img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .aboutContent {
+        flex-basis: 100%;
+        margin: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+
+    .pinPointImages {
+        flex-basis: 100%;
+    }
+
+    .aboutMe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutContent {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width:100px) {
+
+    .pinPointImages {
+        max-width: 100px;
+    }
+
+    .aboutContent {
+        max-width: 100px;
+    }
+
+}

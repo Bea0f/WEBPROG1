@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Beatrice's Hemsida </title>
+    <meta name="author" content="beatrice">
+    <meta name="description" content="home sida">
+    <meta name="generator" content="html editor">
+    <meta name="keywords" content="beatrice, hemsida, html">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css-style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>BEATRICE FRIBERG</h1>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="Home.html"> Home</a></li>
+            <li><a href="History.html"> History</a></li>
+            <li><a href="now.html"> Now </a></li>
+            <li><a href="future.html"> Future </a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2> HOME </h2>
+            <figure>
+                <picture>
+                    <source media="(min-width:500px)" srcset="media2.6/jag-rosa.jpg">
+                    <img src="media2.6/jag-rosa.jpg" class="large" />
+                </picture>
+                <br />
+                <figcaption>Här är jag!</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h4> Innehåll </h4>
+            <dl>
+                <dt>Home</dt>
+                <dd><i>-Allmän information</i></dd>
+                <dt>History</dt>
+                <dd><i>-Bakgrund och historia</i></dd>
+                <dt>Now</dt>
+                <dd><i>-Aktuellt</i></dd>
+                <dt>Future</dt>
+                <dd><i>-Framtida aktiviteter</i></dd>
+            </dl>
+        </section>
+    </main>
+    <aside>
+        <br />
+        <article class="message">
+            <fieldset>
+                <legend> Skicka ett meddelande till mig</legend>
+                <form id="form" method="post" enctype="multipart/form-data" action="https://people.dsv.su.se/~pierre/i/05_ass/ip3/1/1.10/example.php">
+                    <label for="namn">Namn:</label> <br />
+                    <input id="namn" type="text" size="25" maxlength="50" placeholder="Förnamn Efternamn" required /> <br />
+                    <label for="email">Email:</label><br />
+                    <input id="email" type="email" size="25" maxlength="50" placeholder="minmailadress@mail.se" required /><br />
+                    <label for="url">Hemsida:</label><br />
+                    <input id="url" type="url" size="25" maxlength="50" placeholder="www.minhemsida.se" /><br />
+                    <label for="adress">Adress:</label> <br />
+                    <input id="adress" type="text" size="25" maxlength="50" placeholder="Gatan 12" required /> <br />
+                    <label for="postkod">Postkod:</label> <br />
+                    <input id="postkod" type="text" size="25" maxlength="50" placeholder="123 45" required pattern="{5}" title="Måste innehålla 5 siffor" /> <br />
+                    <label for="postort">Postort:</label> <br />
+                    <input id="postort" type="text" size="25" maxlength="50" required /> <br />
+                    <label for="svar">Jag vill ha svar:</label><br />
+                    <input id="svar" type="checkbox" value="svar" /><br />
+                    <label>Vill du ha en kopia på utsänt meddelande? </label><br />
+                    <input type="radio" id="kopiaJa" name="kopia" value="ja" />
+                    <label for="kopiaJa">Ja</label>
+                    <input type="radio" id="kopiaNej" name="kopia" value="nej" />
+                    <label for="kopiaNej">Nej</label><br />
+                    <label for="ämne">Ämne:</label><br />
+                    <select id="ämne">
+                        <option value="hemsida">Hemsdia
+                        <option value="om mig">Om mig
+                        <option value="allmänt">Allmänt
+                    </select><br />
+                    <label for="file">Ladda upp en fil:</label><br />
+                    <input id="file" type="file" /><br />
+                    <label for="favWebb"> Vilken är din föredragna webbläsare? </label>
+                    <input type="text" name="fav=webb" id="favWebb" list="webbType">
+                    <datalist id="webbType">
+                        <option value="Safari">
+                        <option value="Chrome">
+                        <option value="Firefox">
+                        <option value="Edge">
+                    </datalist>
+                    <textarea name="meddelande" cols="50" rows="8" placeholder="Skriv ditt meddelande här..." required></textarea><br />
+                    <input type="submit" name="skicka" value="Skicka" />
+                </form>
+            </fieldset>
+            <br />
+        </article>
+    </aside>
+    <footer>
+        <p><a href="mailto:beatricefriberg@hotmail.com"> Email Beatrice</a></p>
+        <p> &copy;2023 Beatrice Friberg</p>
+    </footer>
+</body>
+
+</html>
